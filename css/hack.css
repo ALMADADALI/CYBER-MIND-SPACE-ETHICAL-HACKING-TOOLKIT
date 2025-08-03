@@ -87,3 +87,102 @@ path.link {
 		overflow-x: auto;
 	}
 }
+
+/* Light Mode Theme (default) */
+body.light-mode {
+	background-color: #ffffff;
+	color: #222222;
+}
+
+body.light-mode #header {
+	color: #333333;
+}
+
+body.light-mode .follow-section h3 {
+	color: #444444;
+}
+
+body.light-mode .list h3 {
+	color: #555555;
+}
+
+body.light-mode .node circle {
+	fill: #ffffff;
+	stroke: #666666;
+}
+
+body.light-mode .node text {
+	fill: #333333;
+}
+
+body.light-mode path.link {
+	stroke: #999999;
+}
+
+
+/* Dark Mode Theme (manual override) */
+body.dark-mode {
+	background-color: #0d0d0d;
+	color: #dddddd;
+}
+
+body.dark-mode #header {
+	color: #f0f0f0;
+}
+
+body.dark-mode .follow-section h3 {
+	color: #cccccc;
+}
+
+body.dark-mode .list h3 {
+	color: #bbbbbb;
+}
+
+body.dark-mode .node circle {
+	fill: #1a1a1a;
+	stroke: #aaaaaa;
+}
+
+body.dark-mode .node text {
+	fill: #e0e0e0;
+}
+
+body.dark-mode path.link {
+	stroke: #666666;
+}
+
+/* Theme toggle button */
+#theme-toggle {
+	background-color: #444;
+	color: #fff;
+	border: none;
+	padding: 8px 16px;
+	font-weight: bold;
+	border-radius: 8px;
+	cursor: pointer;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 1000;
+	transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #theme-toggle:hover {
+	background-color: #666;
+	transform: scale(1.05);
+  }
+  
+  body.dark-mode #theme-toggle {
+	background-color: #eee;
+	color: #111;
+  }
+  
+  body.dark-mode #theme-toggle:hover {
+	background-color: #ddd;
+  }
+  
+  /* Smooth theme transitions */
+  body {
+	transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  
