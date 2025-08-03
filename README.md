@@ -1,4 +1,4 @@
-# CYBER MIND SPACE ETHICAL HACKINHG TOOLKIT
+# CYBER MIND SPACE ETHICAL HACKING TOOLKIT
 
 CYBER MIND SPACE ETHICAL HACKINHG TOOLKIT is a collection of tools, cheat sheets, and resources for Ethical hackers, Penetration Tester, and Security Researchers etc.
 It contains almost all tools mentioned in CEH, OSCP, eCPPT and PNPT
