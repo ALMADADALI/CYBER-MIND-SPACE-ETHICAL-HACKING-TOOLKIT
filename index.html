@@ -78,5 +78,33 @@
 
        </div>
       </div>
+
+      <!-- Dark/Light Mode Toggle Button -->
+<button id="theme-toggle">Toggle Theme</button>
+
+<script>
+  const toggleButton = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    body.classList.add(savedTheme);
+  } else {
+    body.classList.add('light-mode');
+  }
+
+  toggleButton.addEventListener('click', () => {
+    if (body.classList.contains('dark-mode')) {
+      body.classList.remove('dark-mode');
+      body.classList.add('light-mode');
+      localStorage.setItem('theme', 'light-mode');
+    } else {
+      body.classList.remove('light-mode');
+      body.classList.add('dark-mode');
+      localStorage.setItem('theme', 'dark-mode');
+    }
+  });
+</script>
+
    </body>
 </html>
