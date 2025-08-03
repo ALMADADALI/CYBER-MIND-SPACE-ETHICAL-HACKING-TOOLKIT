@@ -79,30 +79,29 @@
        </div>
       </div>
 
-      <!-- Dark/Light Mode Toggle Button -->
-<button id="theme-toggle">Toggle Theme</button>
+<!-- Dark/Light Mode Icon Toggle -->
+<button id="theme-toggle" title="Toggle Theme">
+  🌙
+</button>
 
 <script>
   const toggleButton = document.getElementById('theme-toggle');
   const body = document.body;
 
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    body.classList.add(savedTheme);
-  } else {
-    body.classList.add('light-mode');
+  function setTheme(mode) {
+    body.classList.remove('dark-mode', 'light-mode');
+    body.classList.add(mode);
+    localStorage.setItem('theme', mode);
+    toggleButton.innerText = mode === 'dark-mode' ? '☀️' : '🌙';
   }
 
+  // Load stored theme or default to light
+  const saved = localStorage.getItem('theme') || 'light-mode';
+  setTheme(saved);
+
   toggleButton.addEventListener('click', () => {
-    if (body.classList.contains('dark-mode')) {
-      body.classList.remove('dark-mode');
-      body.classList.add('light-mode');
-      localStorage.setItem('theme', 'light-mode');
-    } else {
-      body.classList.remove('light-mode');
-      body.classList.add('dark-mode');
-      localStorage.setItem('theme', 'dark-mode');
-    }
+    const newTheme = body.classList.contains('dark-mode') ? 'light-mode' : 'dark-mode';
+    setTheme(newTheme);
   });
 </script>
 
