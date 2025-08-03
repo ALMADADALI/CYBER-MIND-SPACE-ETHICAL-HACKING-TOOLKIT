@@ -185,4 +185,28 @@ body.dark-mode path.link {
   body {
 	transition: background-color 0.4s ease, color 0.4s ease;
   }
+
+ /* Icon toggle button styling */
+#theme-toggle {
+	background-color: transparent;
+	border: none;
+	font-size: 24px;
+	padding: 8px;
+	cursor: pointer;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 1000;
+	transition: transform 0.3s ease;
+  }
+  
+  #theme-toggle:hover {
+	transform: scale(1.2);
+  }
+  
+  /* Smooth theme transitions */
+  body {
+	transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  
   
